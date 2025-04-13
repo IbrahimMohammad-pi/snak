@@ -46,13 +46,14 @@
     "cairocoder"
   ],
   "mcpServers": {
-    "brave-search": {
+    "binance": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
-      "env": {
-        "BRAVE_API_KEY": "BSAgWXjaOOpxLi7o-_2jw3oDJSrVw5K"
-      }
+      "args": [
+        "-y",
+        "@snjyor/binance-mcp@latest"
+      ]
     },
+
     "mcp-hn": {
       "command": "uvx",
       "args": ["mcp-hn"]

@@ -47,7 +47,10 @@
     "prettier:client": "prettier --check \"client/**/*.{ts,tsx}\" --write",
     "prettier:all": "pnpm prettier:server && pnpm prettier:agents && pnpm prettier:plugins && pnpm prettier:client",
     "prepublishOnly": "lerna run prepublishOnly",
-    "node:server": "node ./mcps/snak/dist/index.js"
+    "node:server": "node ./mcps/snak/dist/index.js",
+    "list": "node scripts/dev.js list",
+    "generate": "node scripts/dev.js generate",
+    "parse-prd": "node scripts/dev.js parse-prd"
   },
   "dependencies": {
     "@types/pg": "^8.11.11",
@@ -62,7 +65,21 @@
     "starknet": "^6.23.1",
     "util": "^0.12.5",
     "winston": "^3.17.0",
-    "zod": "^3.24.2"
+    "zod": "^3.24.2",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "commander": "^11.1.0",
+    "cli-table3": "^0.6.5",
+    "cors": "^2.8.5",
+    "fastmcp": "^1.20.5",
+    "figlet": "^1.8.0",
+    "fuse.js": "^7.0.0",
+    "gradient-string": "^3.0.0",
+    "helmet": "^8.1.0",
+    "inquirer": "^12.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "lru-cache": "^10.2.0",
+    "openai": "^4.89.0",
+    "ora": "^8.2.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.9",
@@ -102,5 +119,6 @@
     "overrides": {
       "tough-cookie": "^4.1.3"
     }
-  }
+  },
+  "type": "module"
 }

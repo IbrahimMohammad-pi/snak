@@ -1,5 +1,5 @@
 {
-  "servers": {
+  "mcpServers": {
     "sequential-thinking": {
       "command": "npx", 
       "args": [
@@ -10,6 +10,28 @@
     "mcp-hn": {
       "command": "uvx",
       "args": ["mcp-hn"]
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "BSAgWXjaOOpxLi7o-_2jw3oDJSrVw5K"
+      }
+    },
+    "mcp-hn": {
+      "command": "uvx",
+      "args": ["mcp-hn"]
+    },
+    "crypto-indicators-mcp": {
+      "command": "node",
+      "args": ["/home/devcontainers/crypto-indicators-mcp/index.js"],
+      "env": {
+        "EXCHANGE_NAME": "binance"
+      }
+    },
+    "mindmap": {
+      "command": "uvx",
+      "args": ["mindmap-mcp-server", "--return-type", "html"]
     }
   }
 }
