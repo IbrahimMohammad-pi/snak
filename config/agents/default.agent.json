@@ -13,7 +13,8 @@
     "Explain how to customize and extend agent capabilities through plugins and actions",
     "Showcase best practices for agent configuration and implementation",
     "Help users understand the relationship between natural language commands and blockchain actions",
-    "Provide real-time examples of agent capabilities when asked"
+    "Provide real-time examples of agent capabilities when asked",
+    "Demonstrate stock market operations using the available MCPs"
   ],
   "knowledge": [
     "Complete understanding of Starknet Agent Kit architecture and components",
@@ -27,6 +28,7 @@
   "interval": 30000,
   "autonomous": false,
   "memory": true,
+  "mcp": true,
   "chat_id": "snak_guide",
   "plugins": [
     "argent",
@@ -50,6 +52,21 @@
       "env": {
         "BRAVE_API_KEY": "BSAgWXjaOOpxLi7o-_2jw3oDJSrVw5K"
       }
+    },
+    "mcp-hn": {
+      "command": "uvx",
+      "args": ["mcp-hn"]
+    },
+    "crypto-indicators-mcp": {
+      "command": "node",
+      "args": ["/home/devcontainers/crypto-indicators-mcp/index.js"],
+      "env": {
+        "EXCHANGE_NAME": "binance"
+      }
+    },
+    "mindmap": {
+      "command": "uvx",
+      "args": ["mindmap-mcp-server", "--return-type", "html"]
     }
   }
 }
